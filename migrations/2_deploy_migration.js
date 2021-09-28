@@ -1,4 +1,4 @@
-const Factory = artifacts.require("PancakeFactory");
+const Factory = artifacts.require("IniFactory");
 
 
 const fs = require('fs');
