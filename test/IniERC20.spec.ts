@@ -14,7 +14,7 @@ chai.use(solidity)
 const TOTAL_SUPPLY = expandTo18Decimals(10000)
 const TEST_AMOUNT = expandTo18Decimals(10)
 
-describe('PancakeERC20', () => {
+describe('IniERC20', () => {
   const provider = new MockProvider({
     hardfork: 'istanbul',
     mnemonic: 'horn horn horn horn horn horn horn horn horn horn horn horn',
@@ -24,13 +24,15 @@ describe('PancakeERC20', () => {
 
   let token: Contract
   beforeEach(async () => {
+    
     token = await deployContract(wallet, ERC20, [TOTAL_SUPPLY])
+    debugger
   })
 
   it('name, symbol, decimals, totalSupply, balanceOf, DOMAIN_SEPARATOR, PERMIT_TYPEHASH', async () => {
     const name = await token.name()
-    expect(name).to.eq('Pancake LPs')
-    expect(await token.symbol()).to.eq('Cake-LP')
+    expect(name).to.eq('Ini LPs')
+    expect(await token.symbol()).to.eq('INI-LP')
     expect(await token.decimals()).to.eq(18)
     expect(await token.totalSupply()).to.eq(TOTAL_SUPPLY)
     expect(await token.balanceOf(wallet.address)).to.eq(TOTAL_SUPPLY)
