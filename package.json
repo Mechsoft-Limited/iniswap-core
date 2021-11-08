@@ -1,11 +1,11 @@
 {
-  "name": "@pancakeswap-libs/pancake-swap-core",
-  "description": "🎛 Core contracts for the pancake protocol",
-  "version": "0.1.0",
-  "homepage": "https://pancakeswap.finance",
+  "name": "@iniswap/core",
+  "description": "🎛 Core contracts for the iniswap protocol",
+  "version": "0.0.1",
+  "homepage": "https://iniswap.finance",
   "repository": {
     "type": "git",
-    "url": "https://github.com/pancakeswap/pancake-swap-core.git"
+    "url": "https://github.com/Mechsoft-limited/iniswap-core.git"
   },
   "publishConfig": {
     "registry": "http://registry.npmjs.org"
@@ -43,8 +43,9 @@
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
-    "truffle-hdwallet-provider": "^1.0.17",
+    "@truffle/hdwallet-provider": "^1.5.0",
     "truffle": "^5.1.41",
-    "truffle-flattener": "^1.4.4"
+    "truffle-flattener": "^1.4.4",
+    "truffle-hdwallet-provider": "^1.0.17"
   }
 }

@@ -7,7 +7,7 @@ contract IniERC20 is IIniERC20 {
     using SafeMath for uint;
 
     string public constant name = 'Ini LPs';
-    string public constant symbol = 'Cake-LP';
+    string public constant symbol = 'INI-LP';
     uint8 public constant decimals = 18;
     uint  public totalSupply;
     mapping(address => uint) public balanceOf;

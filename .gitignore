@@ -2,3 +2,4 @@ node_modules/
 build/
 address.txt
 pairs.txt
+.secret
