@@ -36,6 +36,8 @@
     "lint": "yarn prettier ./test/*.ts --check",
     "lint:fix": "yarn prettier ./test/*.ts --write",
     "clean": "rimraf ./build/",
+    "migrate:reset": "truffle migrate --network binanceTestnet --reset",
+    "migrate": "truffle migrate --network binanceTestnet",
     "precompile": "yarn clean",
     "compile": "waffle .waffle.json",
     "pretest": "yarn compile",
