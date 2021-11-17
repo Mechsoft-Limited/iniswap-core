@@ -1,8 +1,29 @@
 {
+  "include": ["src", "test","scripts"],
   "compilerOptions": {
-    "target": "es5",
-    "module": "commonjs",
+    "target": "es2018",
+    "module": "esnext",
+    "importHelpers": true,
+    "declaration": true,
+    "sourceMap": true,
+    "rootDir": "./",
     "strict": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "strictFunctionTypes": true,
+    "strictPropertyInitialization": true,
+    "noImplicitThis": true,
+    "alwaysStrict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "moduleResolution": "node",
+    "baseUrl": "./",
+    "paths": {
+      "*": ["src/*", "node_modules/*","build/contracts/*"]
+    },
+    
     "esModuleInterop": true,
     "resolveJsonModule": true
   }
