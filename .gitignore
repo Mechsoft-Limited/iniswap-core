@@ -3,3 +3,5 @@ build/
 address.txt
 pairs.txt
 .secret
+.ganachesecret
+.ganachesecretMainet

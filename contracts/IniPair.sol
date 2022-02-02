@@ -85,7 +85,7 @@ contract IniPair is IIniPair, IniERC20 {
         emit Sync(reserve0, reserve1);
     }
 
-    // if fee is on, mint liquidity equivalent to 1/6th of the growth in sqrt(k)
+    // if fee is on, mint liquidity equivalent to 9/25th of the growth in sqrt(k)
     function _mintFee(uint112 _reserve0, uint112 _reserve1) private returns (bool feeOn) {
         address feeTo = IIniFactory(factory).feeTo();
         feeOn = feeTo != address(0);
@@ -94,9 +94,9 @@ contract IniPair is IIniPair, IniERC20 {
             if (_kLast != 0) {
                 uint rootK = Math.sqrt(uint(_reserve0).mul(_reserve1));
                 uint rootKLast = Math.sqrt(_kLast);
-                if (rootK > rootKLast) {
-                    uint numerator = totalSupply.mul(rootK.sub(rootKLast));
-                    uint denominator = rootK.mul(3).add(rootKLast);
+                if (rootK > rootKLast) {                    
+                    uint numerator = totalSupply.mul(rootK.sub(rootKLast)).mul(9);
+                    uint denominator = rootK.mul(16).add(rootKLast.mul(9));
                     uint liquidity = numerator / denominator;
                     if (liquidity > 0) _mint(feeTo, liquidity);
                 }

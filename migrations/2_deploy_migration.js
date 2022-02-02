@@ -13,7 +13,7 @@ module.exports= async function(deployer,network,accounts){
   
   await deployer.deploy(Factory,accounts[0]);
 const factory = await Factory.deployed();
-  fs.writeFileSync(path.join(__dirname,"../address.txt"),factory.address);
+  fs.writeFileSync(path.join(__dirname,`../${network}_address.txt`),factory.address);
 // if(network === "development")
 // {
 //   const weth = fs.readFileSync(path.join(__dirname,'../../weth/address.txt'),'utf8');

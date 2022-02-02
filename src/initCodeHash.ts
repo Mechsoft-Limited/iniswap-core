@@ -1,1 +1,1 @@
-export const INIT_CODE_HASH = '0xe16c74d38b98ccb5a302116f381d09d548d24f4b2d63a5ddb8a5e82ffa6c0fca'
+export const INIT_CODE_HASH = '0x826f78d6329fea1244837f7eba4d49138d562486cdba7e840bda2cc2f65d2944'

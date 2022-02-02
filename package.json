@@ -1,7 +1,7 @@
 {
   "name": "@iniswap/core",
   "description": "🎛 Core contracts for the iniswap protocol",
-  "version": "0.0.2",
+  "version": "1.0.0",
   "homepage": "https://iniswap.finance",
   "repository": {
     "type": "git",
