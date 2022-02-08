@@ -21,9 +21,17 @@
   const HDWalletProvider = require('@truffle/hdwallet-provider');
   const fs = require('fs');
   const privateKey = fs.readFileSync(".ganachesecret").toString().trim();
-  const mnemonic = fs.readFileSync(".ganachesecretMainet").toString().trim();
+  const path = require('path');
+  const mnemonic = fs.readFileSync(path.join(__dirname,"../.ganachesecretMainet")).toString().trim();
+  const BSCSCANAPIKEY = fs.readFileSync(path.join(__dirname,"../.bscscankey")).toString().trim();
 
-module.exports = {
+  module.exports = {
+    plugins: [
+      'truffle-plugin-verify'
+    ],
+    api_keys: {
+      bscscan: BSCSCANAPIKEY
+    },
   /**
    * Networks define how you connect to your ethereum client and let you set the
    * defaults web3 uses to send transactions. If you don't specify one truffle
@@ -109,10 +117,10 @@ module.exports = {
      // docker: true,        // Use "0.5.1" you've installed locally with docker (default: false)
       settings: {          // See the solidity docs for advice about optimization and evmVersion
        optimizer: {
-         enabled: true,
-         runs: 1000
+         enabled: false,
+         runs: 200
        },
-       evmVersion: "istanbul"
+      // evmVersion: "istanbul"
       }
     }
   },

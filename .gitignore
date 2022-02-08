@@ -1,6 +1,7 @@
 node_modules/
 build/
 address.txt
+binance1_address.txt
 pairs.txt
 .secret
 .ganachesecret
