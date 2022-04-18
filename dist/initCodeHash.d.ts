@@ -1,0 +1,1 @@
+export declare const INIT_CODE_HASH = "0x8934035878e8bc7a9961fd58a834b5a876eed67fc8efb8fcfc7869e5198565c7";

@@ -42,10 +42,12 @@ contract IniFactory is IIniFactory {
     function setFeeTo(address _feeTo) external {
         require(msg.sender == feeToSetter, 'Ini: FORBIDDEN');
         feeTo = _feeTo;
+
     }
 
     function setFeeToSetter(address _feeToSetter) external {
         require(msg.sender == feeToSetter, 'Ini: FORBIDDEN');
         feeToSetter = _feeToSetter;
+        
     }
 }

@@ -6,12 +6,14 @@ const Pair = artifacts.require("IniPair")
 const fs = require('fs');
 const path = require('path');
 module.exports= async function(deployer,network,accounts){
-  await deployer.deploy(SafeMath);
-  await deployer.deploy(UQ112x112);
-  await deployer.link(SafeMath,[Factory])
-  await deployer.link(UQ112x112,[Factory])
+ // await deployer.deploy(SafeMath);//0xfBE277059843337978A9a0af5b7EEcABf3CDA994
+   const safeLib= await SafeMath.at("0xfBE277059843337978A9a0af5b7EEcABf3CDA994")
+ // await deployer.deploy(UQ112x112);//0x267B0bba427E066276dcb4f9e417fA0805752a3E
+ const uqLib= await UQ112x112.at("0x267B0bba427E066276dcb4f9e417fA0805752a3E")
+  await deployer.link(safeLib,[Factory])
+  await deployer.link(uqLib,[Factory])
   
-  await deployer.deploy(Factory,accounts[0]);
+  await deployer.deploy(Factory,accounts[0]);//0x36441d07f64736BF209c3BC80CDBF6B9648Bce36
 const factory = await Factory.deployed();
   fs.writeFileSync(path.join(__dirname,`../${network}_address.txt`),factory.address);
 // if(network === "development")

@@ -1,7 +1,7 @@
 {
   "name": "@iniswap/core",
   "description": "🎛 Core contracts for the iniswap protocol",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "homepage": "https://iniswap.finance",
   "repository": {
     "type": "git",
@@ -47,13 +47,13 @@
     "compile": "waffle .waffle.json",
     "pretest": "yarn compile",
     "test": "mocha",
-    "prepublishOnly": "yarn build"
+    "prepublishOnlyd": "yarn build"
   },
   "license": "GPL-3.0-or-later",
   "dependencies": {
     "@ethersproject/solidity": "^5.5.0",
     "@truffle/hdwallet-provider": "^1.5.0",
-    "truffle": "^5.1.41",
+    "truffle": "^5.5.10",
     "truffle-flattener": "^1.4.4",
     "truffle-hdwallet-provider": "^1.0.17"
   }
